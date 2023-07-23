@@ -32,6 +32,10 @@ const productsSchema = mongoose.Schema({
     type: String,
     default: "Accesorios",
   },
+  subCategory: {
+    type: String,
+    default: "accesoriosAmigas",
+  },
   thumbnails: {
     type: String,
     default: '',

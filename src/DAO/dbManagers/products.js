@@ -40,6 +40,15 @@ export default class ProductManager {
         }
     };
 
+    getProductsByCategory = async (category) => {
+        try {
+            const products = await productsModel.find({ category: category }).lean();
+            return products;
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     updateProduct = async (id, changes) => {
         try {
             const updatedProduct = await productsModel.updateOne(
